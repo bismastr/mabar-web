@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = `https://mabar.bism.app/api/v1`;
+const baseUrl = `https://api-mabar.bism.app/api/v1`;
 
 const loginDiscord = () => {
     window.location.href = baseUrl + "/auth/discord";
