@@ -28,7 +28,7 @@ function App() {
       <Login profile={profile} />
 
       {isLoggedIn && (
-        <CreateMabarForm />
+        <CreateMabarForm profile={profile} />
       )}
     </div>
   );
