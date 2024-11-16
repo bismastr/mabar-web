@@ -21,13 +21,13 @@ function App() {
   }, [])
 
 
-  const isLoggedIn = Object.keys(profile).length > 0;
+
 
   return (
     <div className="container w-max">
       <Login profile={profile} />
 
-      {isLoggedIn && (
+      {profile.user_id && (
         <CreateMabarForm profile={profile} />
       )}
     </div>
