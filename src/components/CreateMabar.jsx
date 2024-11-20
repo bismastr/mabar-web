@@ -14,7 +14,8 @@ const CreateMabarForm = ({ profile }) => {
             session_end: "2024-11-09T15:00:00Z", // Replace with actual end time logic
             session_start: "2024-11-09T13:00:00Z", // Replace with actual start time logic
             game_name: selectedGame,
-            is_finish: false
+            is_finish: false,
+            channel_id: "1266741824492408925"
         };
 
         try {
