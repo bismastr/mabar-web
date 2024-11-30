@@ -8,8 +8,8 @@ const CreateMabarForm = ({ profile }) => {
         const param = {
             created_at: new Date().toISOString(),
             created_by: {
-                id: profile.user_id,
-                username: profile.name
+                id: profile.ID,
+                username: profile.username
             },
             session_end: "2024-11-09T15:00:00Z", // Replace with actual end time logic
             session_start: "2024-11-09T13:00:00Z", // Replace with actual start time logic

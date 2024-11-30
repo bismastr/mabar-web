@@ -20,14 +20,11 @@ function App() {
     fetchProfile();
   }, [])
 
-
-
-
   return (
     <div className="container w-max">
       <Login profile={profile} />
 
-      {profile.user_id && (
+      {profile.ID && (
         <CreateMabarForm profile={profile} />
       )}
     </div>

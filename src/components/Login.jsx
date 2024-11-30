@@ -2,11 +2,11 @@ import auth from "../service/auth"
 
 
 const Login = ({ profile }) => {
-    if (profile.user_id) {
+    if (profile.ID) {
         return (
             <div className="flex justify-center items-center gap-3">
-                <img src={profile.avatar_url} className="w-8 h-8 rounded-lg object-cover" alt="image" />
-                <p>Welcome, {profile.name}</p>
+                <img src={profile.AvatarUrl} className="w-8 h-8 rounded-lg object-cover" alt="image" />
+                <p>Welcome, {profile.Username}</p>
             </div>
         )
     }
