@@ -6,15 +6,11 @@ const CreateMabarForm = ({ profile }) => {
 
     const handleButtonClick = async () => {
         const param = {
-            created_at: new Date().toISOString(),
-            created_by: {
-                id: profile.ID,
-                username: profile.username
-            },
-            session_end: "2024-11-09T15:00:00Z", // Replace with actual end time logic
-            session_start: "2024-11-09T13:00:00Z", // Replace with actual start time logic
-            game_name: selectedGame,
+            created_by: profile.id,
+            session_end: "2024-11-09T15:00:00Z",
+            session_start: "2024-11-09T10:00:00Z",
             is_finish: false,
+            game_id: parseInt(selectedGame),
             channel_id: "1266741824492408925"
         };
 
@@ -40,11 +36,9 @@ const CreateMabarForm = ({ profile }) => {
                         onChange={(e) => setSelectedGame(e.target.value)}
                     >
                         <option value="">Select a game</option>
-                        <option value="Counter Strike 2">Counter Strike 2</option>
-                        <option value="Deadlock">Deadlock</option>
-                        <option value="Rainbow 6">Rainbow 6</option>
-                        <option value="Valorant">Valorant</option>
-                        <option value="Minecraft">Minecraft</option>
+                        <option value="1">Counter Strike 2</option>
+                        <option value="2">Deadlock</option>
+                        <option value="3">Valorant</option>
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg className="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>

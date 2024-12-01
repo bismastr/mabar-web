@@ -24,7 +24,7 @@ function App() {
     <div className="container w-max">
       <Login profile={profile} />
 
-      {profile.ID && (
+      {profile.id && (
         <CreateMabarForm profile={profile} />
       )}
     </div>
