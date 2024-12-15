@@ -1,10 +1,9 @@
-import axiosClient from "./axiosClient";
+import axiosClient from "./client";
 
 const baseUrl = `https://api-mabar.bism.app/api/v1`;
 
 const getAllGamingSessions = async (param) => {
-
-    const res = await axiosClient.get(baseUrl + "/gaming-session", {
+    const res = await axiosClient.get("/gaming-session", {
         headers: {
             "Content-Type": "application/json"
         },

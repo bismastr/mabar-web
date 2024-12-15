@@ -30,16 +30,18 @@ function App() {
     <div className="container w-max">
       <Login profile={profile} />
       {profile.id && (
-        <CreateMabarForm profile={profile} />
+        <div>
+          <CreateMabarForm profile={profile} />
+          <div className="text-5xl font-semibold pb-1 text-left">Happening Now!</div>
+          <div className="text-xl font-light pb-6 text-left">Find your fellow gamers</div>
+          <div>
+            {gamingSessions.map((session, index) => (
+              <MabarList session={session} />
+            ))}
+          </div>
+        </div>
       )}
-      <div className="text-5xl font-semibold pb-4">Happening Now!</div>
-      <div>
-        {gamingSessions.map((session, index) => (
-          <MabarList session={session} />
-        ))}
-      </div>
     </div>
-
 
   );
 }

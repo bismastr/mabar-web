@@ -1,13 +1,11 @@
-import axios from "axios";
-
-const baseUrl = `https://api-mabar.bism.app/api/v1`;
+import axiosClient from "./client";
 
 const loginDiscord = () => {
-    window.location.href = baseUrl + "/auth/discord";
+    window.location.href = axiosClient.defaults.baseURL + "/auth/discord";
 };
 
 const getProfile = async () => {
-    const res = await axios.get(baseUrl + "/auth/profile", {
+    const res = await axiosClient.get("/auth/profile", {
         withCredentials: true
     });
 
@@ -15,7 +13,7 @@ const getProfile = async () => {
 }
 
 const createMabar = async (param) => {
-    const res = await axios.post(baseUrl + "/bot/gaming-session/create", param, {
+    const res = await axiosClient.post("/bot/gaming-session/create", param, {
         headers: {
             "Content-Type": "application/json"
         },

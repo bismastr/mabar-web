@@ -6,14 +6,20 @@ const MabarList = ({ session }) => {
 
     return (
         <div className="flex flex-row space-x-10">
-            <div className="flex-none w-1/12 h-14 flex items-center justify-center">
+            {/* Game Icon */}
+            <div className="flex-none w-1/12 h-14 flex">
                 <img src={session.game_info.icon_url} className="w-8 h-8 rounded-lg object-cover" alt="image" />
             </div>
-            <div className="flex-none w-1/5 h-14 flex items-center justify-center">
+            {/* Game Name */}
+            <div className="flex-none w-1/5 h-14 flex">
                 {session.game_info.name}
             </div>
-            <div className="flex-grow h-14 flex items-center justify-center">Join Session game</div>
-            <div className="flex-grow h-14 flex items-center justify-center">
+            {/* Session Title Name */}
+            <div className="flex-grow h-14 flex">
+                Join Session game
+            </div>
+            {/* Icon Game */}
+            <div className="flex-grow h-14 flex">
                 <div className="flex -space-x-4 rtl:space-x-reverse">
                     {session.members && session.members.slice(0, 1).map((m, index) => (
                         <img
